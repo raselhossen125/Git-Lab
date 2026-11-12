@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasel Hossen | Personal Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* Navbar */
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 28px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #6366f1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #6366f1;
+        }
+
+        .contact-btn {
+            padding: 11px 21px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            color: #0f172a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .contact-btn:hover {
+            background: #6366f1;
+            color: white;
+            border-color: #6366f1;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 82vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: #e0e7ff;
+            filter: blur(100px);
+            border-radius: 50%;
+            top: 5%;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 9px 17px;
+            border-radius: 30px;
+            background: #eef2ff;
+            color: #6366f1;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            font-weight: 800;
+            letter-spacing: -3px;
+            line-height: 1.15;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 span {
+            color: #6366f1;
+        }
+
+        .hero p {
+            max-width: 570px;
+            margin: 0 auto;
+            color: #64748b;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .buttons {
+            margin-top: 35px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .primary-btn {
+            background: #6366f1;
+            color: white;
+            padding: 15px 27px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .primary-btn:hover {
+            background: #4f46e5;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            border: 1px solid #cbd5e1;
+            color: #334155;
+            padding: 15px 27px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .secondary-btn:hover {
+            background: white;
+            transform: translateY(-3px);
+        }
+
+        /* About Section */
+        .about {
+            max-width: 850px;
+            margin: 0 auto 70px;
+            padding: 35px 25px;
+            text-align: center;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+        }
+
+        .about h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about p {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e2e8f0;
+            padding: 25px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 600px) {
+            nav {
+                padding: 22px 18px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 75vh;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .about {
+                margin: 0 18px 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Rasel<span>.</span></div>
+
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="mailto:rasel@example.com">Contact</a>
+        </div>
+
+        <a href="mailto:rasel@example.com" class="contact-btn">
+            Let's Talk ↗
+        </a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+
+            <div class="tag">
+                ✦ Welcome to my personal website
+            </div>
+
+            <h1>
+                Hi, I'm <span>Rasel Hossen.</span>
+            </h1>
+
+            <p>
+                A Computer Science student passionate about
+                technology, programming, and building things
+                that make a difference. Always learning,
+                exploring, and growing.
+            </p>
+
+            <div class="buttons">
+                <a href="#about" class="primary-btn">
+                    About Me ↗
+                </a>
+
+                <a href="mailto:rasel@example.com" class="secondary-btn">
+                    Get in Touch
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+
+        <p>
+            I'm Rasel Hossen, a Computer Science student
+            interested in software development and technology.
+            I enjoy learning new skills and turning ideas
+            into reality through code.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Rasel Hossen. All rights reserved.
+    </footer>
+
+</body>
+</html>
